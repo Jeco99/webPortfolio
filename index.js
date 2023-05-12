@@ -13,7 +13,6 @@ var button = document.getElementsByClassName('contentButton');
 var icon = document.getElementsByClassName('bi');
 
 
-
 function changeDark(){
 
    for(let h_One=0; h_One < h1.length; h_One++){
@@ -35,6 +34,7 @@ function changeDark(){
    for(let buttonLen=0; buttonLen < button.length; buttonLen++){
     button[buttonLen].style.color = "white";
     button[buttonLen].style.backgroundColor = "black";
+    button[buttonLen].style.border = "1px solid white"
    }
 
    navText.style.color = "white";
@@ -42,6 +42,7 @@ function changeDark(){
    //background
    body.style.backgroundColor = "black";
    nav.style.backgroundColor = "black";
+  
 
    //icon
    for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
@@ -72,6 +73,7 @@ function changeWhite(){
     for(let buttonLen=0; buttonLen < button.length; buttonLen++){
      button[buttonLen].style.color = "black";
      button[buttonLen].style.backgroundColor = "white";
+     button[buttonLen].style.border = "1px solid black"
     }
  
     navText.style.color = "black";
@@ -79,6 +81,7 @@ function changeWhite(){
     //background
     body.style.backgroundColor = "white";
     nav.style.backgroundColor = "white";
+ 
  
     //icon
     for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
