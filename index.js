@@ -45,7 +45,7 @@ function changeDark(){
 
    //icon
    for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
-    icon[icon_Len].style.color = "red";
+    icon[icon_Len].style.color = "white";
    }
  
 }
@@ -82,7 +82,7 @@ function changeWhite(){
  
     //icon
     for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
-     icon[icon_Len].style.color = "red";
+     icon[icon_Len].style.color = "black";
     }
   
  }
