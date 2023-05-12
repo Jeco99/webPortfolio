@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+.main-content{
+    width: 100%;
+    height: 100vh;
+}
+
+.imgContent{
+    height: auto;
+    width:50vw;
+}
+
+.fontContent{
+    font-size: 2em;
+}
+
+@media screen and (max-width:1320px) {
+   
+    .aboutMe .container img{
+        flex-direction: column;
+   }  
+
+   .imgContent{
+        height: auto;
+        width: 80vw;
+   }
+
+    .fontContent{
+     font-size: 1.5em;
+     padding-top: 32px;
+   } 
+}
+
+
+@media screen and (max-width:600px) {
+   
+    /* .imgContent{
+        height: auto;
+        width: 70vw;
+   } */
+     
+   .fontContent{
+    font-size: 1em;
+  } 
+}
+
+
+
