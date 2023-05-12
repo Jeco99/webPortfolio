@@ -12,6 +12,27 @@ var navLink = document.getElementsByClassName('nav-link');
 var button = document.getElementsByClassName('contentButton');
 var icon = document.getElementsByClassName('bi');
 
+var ranColor = {
+        'blue' : {
+            'oxford-blue': '#0B2447;',
+            'indigo': '#19376D;',
+            'blue-yonder': '#576CBC;',
+            'non-photo-blue': '#A5D7E8;'
+        } , 
+        
+        'red' : {
+            'carminePink':'#ee4540;',
+            'frenchRaspberry':'#c72c41;',
+            'claret':'#801336' ,
+            'brownChocolate':'#510a32', 
+            'darkPurple':'#2d142c;'
+        }
+}
+
+
+//indi pa ta na dynamic
+var bgDropdown = document.getElementsByClassName('bgDropdown');
+
 
 function changeDark(){
 
@@ -42,7 +63,8 @@ function changeDark(){
    //background
    body.style.backgroundColor = "black";
    nav.style.backgroundColor = "black";
-  
+   bgDropdown[1].style.backgroundColor = "black";
+   bgDropdown[2].style.backgroundColor = "white";
 
    //icon
    for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
@@ -81,6 +103,8 @@ function changeWhite(){
     //background
     body.style.backgroundColor = "white";
     nav.style.backgroundColor = "white";
+    bgDropdown[2].style.backgroundColor = "white";
+    bgDropdown[1].style.backgroundColor = "white";
  
  
     //icon
@@ -90,7 +114,7 @@ function changeWhite(){
   
  }
 
-
+// console.log(dropdown_Text);
 
 dark.addEventListener('click', changeDark);
 white.addEventListener('click', changeWhite);
