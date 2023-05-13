@@ -13,27 +13,27 @@ var navText = document.getElementById('navText-Col');
 var navLink = document.getElementsByClassName('nav-link'); 
 var button = document.getElementsByClassName('contentButton');
 var icon = document.getElementsByClassName('bi');
+var bgDropdown = document.getElementsByClassName('bgDropdown');
+var offCanvas_bg = document.getElementsByClassName('offCanvas-bg')[0];
+var offCanvas_title = document.getElementById('offcanvasNavbarLabel');
 
 var ranColor = {
         'blue' : {
-            'oxford-blue': '#0B2447;',
-            'indigo': '#19376D;',
-            'blue-yonder': '#576CBC;',
-            'non-photo-blue': '#A5D7E8;'
+            'oxford-blue': '#0B2447',
+            'indigo': '#19376D',
+            'blue-yonder': '#576CBC',
+            'non-photo-blue': '#A5D7E8'
         } , 
         
         'red' : {
-            'carminePink':'#ee4540;',
-            'frenchRaspberry':'#c72c41;',
+            'carminePink':'#ee4540',
+            'frenchRaspberry':'#c72c41',
             'claret':'#801336' ,
             'brownChocolate':'#510a32', 
             'darkPurple':'#2d142c;'
         }
 }
 
-
-//indi pa ta na dynamic
-var bgDropdown = document.getElementsByClassName('bgDropdown');
 
 
 function changeDark(){
@@ -62,13 +62,17 @@ function changeDark(){
 
    for(let bgDropdown_Len = 0; bgDropdown_Len < bgDropdown.length; bgDropdown_Len++){
     bgDropdown[bgDropdown_Len].style.color = "white";
-}
+    bgDropdown[bgDropdown_Len].style.backgroundColor = "black";
+    bgDropdown[bgDropdown_Len].style.border = "1px solid white";
+    }
 
    navText.style.color = "white";
+   offCanvas_title.style.color = "white";
 
    //background
    body.style.backgroundColor = "black";
    nav.style.backgroundColor = "black";
+   offCanvas_bg.style.backgroundColor = "black";
 
 //    bgDropdown[1].style.backgroundColor = "black";
 //    bgDropdown[2].style.backgroundColor = "white";
@@ -79,7 +83,7 @@ function changeDark(){
    }
 
    //remove date
-   datePrint.removeChild(dateDiv);
+//    datePrint.removeChild(dateDiv);
  
 }
 
@@ -109,14 +113,18 @@ function changeWhite(){
     }
 
     for(let bgDropdown_Len = 0; bgDropdown_Len < bgDropdown.length; bgDropdown_Len++){
-        bgDropdown[bgDropdown_Len].style.color = "dark";
+        bgDropdown[bgDropdown_Len].style.color = "black";
+        bgDropdown[bgDropdown_Len].style.backgroundColor = "white";
+        bgDropdown[bgDropdown_Len].style.border = "1px solid black";
     }
 
     navText.style.color = "black";
+    offCanvas_title.style.color = "black";
  
     //background
     body.style.backgroundColor = "white";
     nav.style.backgroundColor = "white";
+    offCanvas_bg.style.backgroundColor = "white";
 
     // bgDropdown[2].style.backgroundColor = "white";
     // bgDropdown[1].style.backgroundColor = "white";
@@ -149,11 +157,12 @@ function changeWhite(){
  
     for(let buttonLen=0; buttonLen < button.length; buttonLen++){
      button[buttonLen].style.color = ranColor['blue']['blue-yonder'];
-     button[buttonLen].style.backgroundColor = ranColor['blue']['blue-yonder'];
+     button[buttonLen].style.backgroundColor = ranColor['blue']['non-photo-blue'];
      button[buttonLen].style.border = "1px solid black"
     }
  
     navText.style.color = ranColor['blue']['blue-yonder'];
+    offCanvas_title.style.color = "white";
  
     //background
     body.style.backgroundColor = ranColor['blue']['oxford-blue'];
@@ -200,6 +209,9 @@ function changeWhite(){
 dark.addEventListener('click', changeDark);
 white.addEventListener('click', changeWhite);
 randomly.addEventListener('click', changeBlue);
+
+//by default
+changeDark()
 
 
 
