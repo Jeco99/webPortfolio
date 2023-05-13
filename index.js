@@ -1,3 +1,5 @@
+//get the date.js file
+
 const dark = document.getElementById('dark');
 const white = document.getElementById('white');
 const randomly = document.getElementById('randomColor'); 
@@ -58,6 +60,10 @@ function changeDark(){
     button[buttonLen].style.border = "1px solid white"
    }
 
+   for(let bgDropdown_Len = 0; bgDropdown_Len < bgDropdown.length; bgDropdown_Len++){
+    bgDropdown[bgDropdown_Len].style.color = "white";
+}
+
    navText.style.color = "white";
 
    //background
@@ -71,6 +77,9 @@ function changeDark(){
    for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
     icon[icon_Len].style.color = "white";
    }
+
+   //remove date
+   datePrint.removeChild(dateDiv);
  
 }
 
@@ -98,7 +107,11 @@ function changeWhite(){
      button[buttonLen].style.backgroundColor = "white";
      button[buttonLen].style.border = "1px solid black"
     }
- 
+
+    for(let bgDropdown_Len = 0; bgDropdown_Len < bgDropdown.length; bgDropdown_Len++){
+        bgDropdown[bgDropdown_Len].style.color = "dark";
+    }
+
     navText.style.color = "black";
  
     //background
@@ -113,6 +126,7 @@ function changeWhite(){
     for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
      icon[icon_Len].style.color = "black";
     }
+
   
  }
 
@@ -156,8 +170,40 @@ function changeWhite(){
   
  }
 
+
+ // added date feature
+
+// var datePrint = document.getElementsByClassName('datePrint')[0];
+// var dateDiv = document.createElement('div');
+
+
+// const toDay = new Date();
+
+// const MonthName = [
+//     "January", "February", "March", "April", "May",
+//     "June", "July", "August", "September", "October",
+//     "November", "December"
+// ]
+
+// let month = toDay.getMonth();
+// let day = toDay.getDate();
+// let year = toDay.getFullYear();
+
+// dateDiv.innerHTML += MonthName[month] + " " + day + "," + year;
+// dateDiv.style.color = "red";
+// dateDiv.style.fontSize = "50px";
+
+// datePrint.append(dateDiv);
+
 // console.log(dropdown_Text);
 
 dark.addEventListener('click', changeDark);
 white.addEventListener('click', changeWhite);
 randomly.addEventListener('click', changeBlue);
+
+
+
+
+
+
+
