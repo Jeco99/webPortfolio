@@ -63,8 +63,9 @@ function changeDark(){
    //background
    body.style.backgroundColor = "black";
    nav.style.backgroundColor = "black";
-   bgDropdown[1].style.backgroundColor = "black";
-   bgDropdown[2].style.backgroundColor = "white";
+
+//    bgDropdown[1].style.backgroundColor = "black";
+//    bgDropdown[2].style.backgroundColor = "white";
 
    //icon
    for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
@@ -103,8 +104,9 @@ function changeWhite(){
     //background
     body.style.backgroundColor = "white";
     nav.style.backgroundColor = "white";
-    bgDropdown[2].style.backgroundColor = "white";
-    bgDropdown[1].style.backgroundColor = "white";
+
+    // bgDropdown[2].style.backgroundColor = "white";
+    // bgDropdown[1].style.backgroundColor = "white";
  
  
     //icon
@@ -114,7 +116,48 @@ function changeWhite(){
   
  }
 
+ function changeBlue(){
+     for(let h_One=0; h_One < h1.length; h_One++){
+     h1[h_One].style.color = ranColor['blue']['blue-yonder'];
+    }
+ 
+    for(let h_Two=0; h_Two < h2.length; h_Two++){
+     h2[h_Two].style.color = ranColor['blue']['blue-yonder'];
+    }
+ 
+    for(let paraLen=0; paraLen < p.length; paraLen++){
+     p[paraLen].style.color = ranColor['blue']['blue-yonder'];
+    }
+ 
+    for(let navLink_Len=0; navLink_Len < navLink.length; navLink_Len++){
+     navLink[navLink_Len].style.color = ranColor['blue']['non-photo-blue'];
+    }
+ 
+    for(let buttonLen=0; buttonLen < button.length; buttonLen++){
+     button[buttonLen].style.color = ranColor['blue']['blue-yonder'];
+     button[buttonLen].style.backgroundColor = ranColor['blue']['blue-yonder'];
+     button[buttonLen].style.border = "1px solid black"
+    }
+ 
+    navText.style.color = ranColor['blue']['blue-yonder'];
+ 
+    //background
+    body.style.backgroundColor = ranColor['blue']['oxford-blue'];
+    nav.style.backgroundColor = ranColor['blue']['oxford-blue'];
+
+    // bgDropdown[2].style.backgroundColor = "white";
+    // bgDropdown[1].style.backgroundColor = "white";
+ 
+ 
+    //icon
+    for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
+     icon[icon_Len].style.color = ranColor['blue']['indigo'];;
+    }
+  
+ }
+
 // console.log(dropdown_Text);
 
 dark.addEventListener('click', changeDark);
 white.addEventListener('click', changeWhite);
+randomly.addEventListener('click', changeBlue);

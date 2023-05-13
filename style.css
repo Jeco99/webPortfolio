@@ -4,13 +4,20 @@
     border: 0;
 }
 
+:root{
+    --oxford-blue: #0B2447;
+    --blue-yonder: #576CBC;
+    --indigo: #19376D;
+    --non-photo-blue:#A5D7E8;
+}
+
 .main-content{
     width: 100%;
     height: 100vh;
 }
 
 .portfolio,
-.conatct{
+.contact{
     margin-top: 150px;
 }
 
