@@ -17,7 +17,9 @@
 }
 
 .portfolio,
-.contact{
+.contact,
+.tools,
+.certification{
     margin-top: 150px;
 }
 
@@ -59,6 +61,18 @@
      display: block;
    }
 
+   .card{
+        display: block;
+        margin: auto;
+   }
+
+   .card img{
+        height: 80px;
+        width: 80px;
+        margin: auto;
+        padding-top: 10px;
+   }
+
 }
 
 
@@ -75,4 +89,60 @@
 }
 
 
+/* role animation */
 
+.dropping-texts {
+    display: block;
+  }
+  
+  .dropping-texts > p {
+    opacity:0;
+    position:relative;
+  }
+  
+  .dropping-texts > p:nth-child(1) {
+    animation: roll 5s linear infinite 0s;
+  }
+  .dropping-texts > p:nth-child(2) {
+    animation: roll 5s linear infinite 1s;
+  }
+
+/* redesign */
+
+@keyframes roll {
+  0% {
+    font-size:0px;
+    opacity:0;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    
+  }
+  20% {
+    font-size:inherit;
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size:0px;
+    opacity:0.5;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    transform: rotate(15deg);
+  }
+}
+  
+
+/* certification */
+.card{
+    max-width: 70%;
+    height: 50%;
+}
