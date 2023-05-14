@@ -1,0 +1,573 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid red; */
+}
+
+:root{
+    --carminePink :#ee4540;
+    --frenchRaspberry:#c72c41;
+    --claret:#801336; 
+    --brownChocolate:#510a32; 
+    --darkPurple:#2d142c;
+}
+
+.containers{
+    padding: 20px 40px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: var(--brownChocolate);
+    color: var(--carminePink);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-img{
+    display: flex;
+    align-items: center;
+}
+.nav-img > a{
+    padding-right: 10px;
+}
+
+.nav-inner-img{
+    border-radius: 50%;
+    height: 8vh;
+    width: auto;
+}
+
+
+ul{
+    display: flex;
+} 
+
+li{
+    list-style: none;
+    padding: 0px 30px;
+}
+
+.nav-img > a,
+li > a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #c72c41;
+}
+/* 
+ul > li > a:hover{
+    margin-bottom: 40px;
+    background-color: whitesmoke; 
+    padding: 20px 30px;
+ } */
+
+
+/* main-content */
+.main-content{
+    display: flex;
+    justify-content: center;
+    margin:20px;
+    padding: 15% 0px 21%;
+    font-weight: 700;
+}
+
+.greetings{
+    font-size: 3em;
+}
+
+.intro{
+    font-size: 4em;
+}
+
+span{
+    font-size: 70px;
+}
+ 
+.knowMore{
+    padding: 12px 70px;
+    font-size: 40px;
+    margin: 40px 0px;
+}
+
+button:hover{
+    background-color: aquamarine;
+    opacity: 1;
+ }
+
+ .changeTheme{
+    width: 25px;
+    margin-right: 20px;
+ }
+
+
+
+/* about me */
+.first-section{
+    margin: 20px;
+    background-color: #2d142c;
+    padding: 80px 100px;
+}
+
+.first-section > h1{
+    font-size: 3em;
+    text-align: center;
+}
+
+.first-section-content{
+    display: flex;
+    margin-top: 20px;
+}
+
+.first-section-content > img{
+    width: 500px;
+    height: auto;
+}
+
+.first-inner-content > p{
+    padding: 10px 30px;
+    font-size: 25px;
+    text-indent: 2%;
+}
+
+.first-inner-content > a > button{
+    margin: 30px;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Project */
+.second-content{
+    padding: 150px;
+}
+
+.rows{
+    display: flex;
+}
+
+.second-content > h1{
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 2em;
+}
+
+.second-inner-content > h1{
+    font-size: 3em;
+}
+
+.proj-content{
+    font-size: 1.5em;
+    text-indent: 2%;
+    text-justify: inter-word;
+    text-align: justify;
+}
+
+.tools{
+    font-size: 1.5em;
+}
+
+.rows{
+    display: flex;
+}
+
+.rows > img{
+    height: 400px;
+    width: auto;
+    margin-left: 5%;
+}
+
+.button-view{
+    display: flex;
+}
+
+.button-view > a{
+    margin: 10px  5px 50px 10px;
+}
+
+.button-view > a > button{
+    font-size: 1em;
+    padding: 15px 30px;
+}
+
+
+
+/* contact */
+.contact{
+    background-color: #2d142c;
+    padding: 80px;
+    text-align: center;
+}
+
+.contact > p,
+.contact > a{
+    margin: 40px 0px;
+}
+
+.contact > h1{
+   font-size: 3em;
+}
+
+.contact > p{
+    font-size: 2em;
+}
+
+.contact > a > button{
+    padding: 12px 70px;
+    font-size: 20px;
+}
+
+/* footer */
+footer{
+    text-align: center;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+}
+
+footer > a > img,
+.social-media > a > img{
+    width: 50px;
+    height: auto;
+    margin: 5px 20px;
+}
+
+.line{
+    border: 1px solid black;
+    margin: 20px 0px;
+}
+
+
+@media only screen and (max-width:992px) {
+    /* main-content */
+    .nav-img > a{
+        padding-right: 5px;
+    }
+
+    .nav-img > a,
+    li > a{
+        font-size: 1em;
+    }
+
+    /* first-content */
+
+    .greetings{
+        font-size: 2em;
+    }
+    
+    .intro{
+        font-size: 2.5em;
+    }
+    
+    span{
+        font-size: 50px;
+    }
+     
+    .knowMore{
+        padding: 12px 30px;
+        font-size: 20px;
+        margin: 40px 0px;
+    }
+    
+    /* about me */
+    .first-section-content{
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .first-section-content > img{
+        width: 300px;
+        height: auto;
+        margin: 30px 0px;
+    }
+
+    .first-inner-content > p{
+        font-size: 18px;
+        text-indent: 2%;
+        text-align: justify;
+        text-justify: auto;
+        padding: 0px;
+    }
+
+    .first-inner-content > a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .first-inner-content > a > button{
+        margin: 0;
+        padding: 10px 25px;
+        font-size: .8em;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    /* Project */
+    .second-content{
+        padding: 0px;
+        margin: 90px 0px;
+    }
+
+    .second-content > h1{
+        padding-bottom: 1em;
+    }
+
+    .button-view{
+        flex-direction: row;
+    }
+
+    .button-view > a > button{
+        font-size: .8em;
+        padding: 10px 30px;
+    }
+
+    .button-view > a{
+        margin: 0px 20px 30px 0px;
+    }
+
+    .second-inner-content > h1{
+        font-size: 2em;
+    }
+    
+    .proj-content{
+        font-size: 1em;
+        text-indent: 2%;
+        text-justify: inter-word;
+        text-align: justify;
+    }
+    
+    .tools{
+        font-size: 1em;
+    }
+    .rows{
+        flex-direction: column;
+        margin: 50px 0px;
+    }
+
+    .rows > img{
+        height: auto;
+        padding-top: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+
+}
+@media (min-width: 992px) and (max-width:1120px){
+  
+    .nav-img > a,
+    li > a{
+        font-size: 1.5em;
+    }
+
+    /* first-content */
+
+    .greetings{
+        font-size: 2.5em;
+    }
+    
+    .intro{
+        font-size: 2.7em;
+    }
+    
+    span{
+        font-size: 65px;
+    }
+     
+    .knowMore{
+        padding: 15px 40px;
+        font-size: 20px;
+        margin: 40px 0px;
+    }
+    
+    /* about me */
+    .first-section-content{
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .first-section-content > img{
+        width: 600px;
+        height: auto;
+        margin: 30px 0px;
+    }
+
+    .first-inner-content > a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+   
+    .first-inner-content > a > button{
+        margin: 0;
+        padding: 10px 25px;
+        font-size: .8em;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    /* Project */
+    .second-content{
+        padding: 0px;
+        margin: 90px 0px;
+    }
+
+    .second-content > h1{
+        padding-bottom: 1em;
+    }
+
+    .button-view{
+        flex-direction: row;
+    }
+
+    .button-view > a > button{
+        font-size: 1em;
+        padding: 10px 30px;
+    }
+
+    .button-view > a{
+        margin: 0px 20px 30px 0px;
+    }
+
+    .second-inner-content > h1{
+        font-size: 3em;
+    }
+    
+    .proj-content{
+        font-size: 1.2em;
+        text-indent: 2%;
+        text-justify: inter-word;
+        text-align: justify;
+    }
+    
+    .tools{
+        font-size: 1.5em;
+    }
+
+    .rows{
+        flex-direction: column;
+        margin: 50px 0px;
+    }
+
+    .rows > img{
+        height: auto;
+        padding-top: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+}
+
+
+@media (min-width: 1120px) and (max-width:1400px) {
+
+    /* main-content */
+    .nav-img > a,
+    li > a{
+        font-size: 1.5em;
+    }
+
+    /* first-content */
+
+    .greetings{
+        font-size: 3.5em;
+    }
+    
+    .intro{
+        font-size: 4em;
+    }
+    
+    span{
+        font-size: 75px;
+    }
+     
+    .knowMore{
+        padding: 15px 40px;
+        font-size: 30px;
+        margin: 40px 0px;
+    }
+    
+    /* about me */
+    .first-section-content{
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .first-section-content > img{
+        width: 600px;
+        height: auto;
+        margin: 30px 0px;
+    }
+
+    .first-inner-content > a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+   
+    .first-inner-content > a > button{
+        margin: 0;
+        padding: 10px 25px;
+        font-size: .8em;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    /* Project */
+    .second-content{
+        padding: 0px;
+        margin: 90px 0px;
+    }
+
+    .second-content > h1{
+        padding-bottom: 1em;
+    }
+
+    .button-view{
+        flex-direction: row;
+    }
+
+    .button-view > a > button{
+        font-size: 1em;
+        padding: 10px 30px;
+    }
+
+    .button-view > a{
+        margin: 0px 20px 30px 0px;
+    }
+
+    .second-inner-content > h1{
+        font-size: 3em;
+    }
+    
+    .proj-content{
+        font-size: 1.5em;
+        text-indent: 2%;
+        text-justify: inter-word;
+        text-align: justify;
+    }
+    
+    .tools{
+        font-size: 1.5em;
+    }
+
+    .rows{
+        flex-direction: column;
+        margin: 50px 0px;
+    }
+
+    .rows > img{
+        height: auto;
+        padding-top: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+}
