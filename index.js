@@ -1,8 +1,13 @@
-//get the date.js file
+// TODO: the exit button need to be colored in offCanvas
+// TODO: the card need to be dynamic in tools section
+// TODO: the certificate image need to be responsive
+// TODO: recheck again
+
 
 const dark = document.getElementById('dark');
 const white = document.getElementById('white');
 const randomly = document.getElementById('randomColor'); 
+const reset = document.getElementById('clear');
 
 var h1 = document.getElementsByTagName('h1');
 var h2 = document.getElementsByTagName('h2');
@@ -16,6 +21,11 @@ var icon = document.getElementsByClassName('bi');
 var bgDropdown = document.getElementsByClassName('bgDropdown');
 var offCanvas_bg = document.getElementsByClassName('offCanvas-bg')[0];
 var offCanvas_title = document.getElementById('offcanvasNavbarLabel');
+
+// date
+var datePrint = document.getElementsByClassName('datePrint')[0];
+var dateDiv = document.createElement('div');
+
 
 var ranColor = {
         'blue' : {
@@ -74,22 +84,19 @@ function changeDark(){
    nav.style.backgroundColor = "black";
    offCanvas_bg.style.backgroundColor = "black";
 
-//    bgDropdown[1].style.backgroundColor = "black";
-//    bgDropdown[2].style.backgroundColor = "white";
-
    //icon
    for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
     icon[icon_Len].style.color = "white";
    }
 
    //remove date
-//    datePrint.removeChild(dateDiv);
+   datePrint.removeChild(dateDiv);
  
 }
 
-
 function changeWhite(){
-
+    
+     
     for(let h_One=0; h_One < h1.length; h_One++){
      h1[h_One].style.color = "black";
     }
@@ -125,10 +132,6 @@ function changeWhite(){
     body.style.backgroundColor = "white";
     nav.style.backgroundColor = "white";
     offCanvas_bg.style.backgroundColor = "white";
-
-    // bgDropdown[2].style.backgroundColor = "white";
-    // bgDropdown[1].style.backgroundColor = "white";
- 
  
     //icon
     for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
@@ -162,15 +165,12 @@ function changeWhite(){
     }
  
     navText.style.color = ranColor['blue']['blue-yonder'];
-    offCanvas_title.style.color = "white";
+    offCanvas_title.style.color = ranColor['blue']['blue-yonder'];
  
     //background
     body.style.backgroundColor = ranColor['blue']['oxford-blue'];
     nav.style.backgroundColor = ranColor['blue']['oxford-blue'];
-
-    // bgDropdown[2].style.backgroundColor = "white";
-    // bgDropdown[1].style.backgroundColor = "white";
- 
+    offCanvas_bg.style.backgroundColor = ranColor['blue']['oxford-blue'];
  
     //icon
     for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
@@ -179,39 +179,42 @@ function changeWhite(){
   
  }
 
-
- // added date feature
-
-// var datePrint = document.getElementsByClassName('datePrint')[0];
-// var dateDiv = document.createElement('div');
+ function changeClear(){
+    changeWhite()
+ }
 
 
-// const toDay = new Date();
 
-// const MonthName = [
-//     "January", "February", "March", "April", "May",
-//     "June", "July", "August", "September", "October",
-//     "November", "December"
-// ]
+// added date feature
+const dateToday = () => {
+    const toDay = new Date();
 
-// let month = toDay.getMonth();
-// let day = toDay.getDate();
-// let year = toDay.getFullYear();
+    const MonthName = [
+        "January", "February",
+        "January", "February", "March", "April", "May",
+        "June", "July", "August", "September", "October",
+        "November", "December"
+    ]
 
-// dateDiv.innerHTML += MonthName[month] + " " + day + "," + year;
-// dateDiv.style.color = "red";
-// dateDiv.style.fontSize = "50px";
+    let month = toDay.getMonth();
+    let day = toDay.getDate();
+    let year = toDay.getFullYear();
 
-// datePrint.append(dateDiv);
+    dateDiv.innerHTML += MonthName[month] + " " + day + "," + year;
+    dateDiv.style.color = "red";
+    dateDiv.style.fontSize = "50px";
 
-// console.log(dropdown_Text);
+    datePrint.append(dateDiv);
+}
 
 dark.addEventListener('click', changeDark);
 white.addEventListener('click', changeWhite);
 randomly.addEventListener('click', changeBlue);
+reset.addEventListener('click', changeClear);
 
 //by default
-changeDark()
+changeWhite()
+dateToday();
 
 
 
