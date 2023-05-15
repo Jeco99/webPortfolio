@@ -23,27 +23,27 @@
             <div class="offcanvas offcanvas-end offCanvas-bg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close" id="btnClose" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#main-content" class="nav-link active">
                                 HOME
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#aboutMe" class="nav-link">
                                 ME
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#portfolio" class="nav-link">
                                 PROJECT
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#contact" class="nav-link">
                                 CONTACT
                             </a>
                         </li>
@@ -68,7 +68,7 @@
 
     <section class="container datePrint text-center"></section>
 
-    <section class="container-fluid main-content d-flex align-items-center">
+    <section class="container-fluid main-content d-flex align-items-center" id="main-content">
         <div class="container text-center ">
             <h1 class="display-3 fw-bolder">
                 Hi
@@ -78,11 +78,11 @@
                     <p>Web Developers</p>
                     <p>Data Analyst</p>
                 </div> <br>
-            <a href="#" target="_paremt" rel="noopener noreferrer"><button class="p-3 fs-5 contentButton">Know more</button></a>
+            <a href=".aboutMe" target="_paremt" rel="noopener noreferrer"><button class="p-3 fs-5 contentButton">Know more</button></a>
         </div>       
     </section>
 
-    <section class="container-fluid aboutMe">
+    <section class="container-fluid aboutMe" id="aboutMe">
         <h1 class="text-center display-3 fw-bolder mb-5">About Me</h1>
         <div class="m-5">
            <div class="row d-flex">
@@ -103,38 +103,66 @@
     </section>
 
     <!-- four icon only -->
-    <section class="container tools">
+    <section class="container tools" id="tools">
          <h1 class="text-center display-3 fw-bolder mb-5">Tools</h1>
-         <div class="row row-cols-md-4 row-cols-1">
+         <div class="row row-cols-md-4 row-cols-2 gy-3">
           <div class="col">
-            <div class="card">
-              <img class="img-thumbnail" src="./img/html-5.png" alt="">
+            <div class="card p-3">
+              <img class="img-thumbnail d-block mx-auto" src="./img/html-5.png" alt="">
               <div class="card-body">
                 <h5 class="text-center">HTML</h5>
+                <div class="bStar text-center">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img class="img-thumbnail" src="./img/html-5.png" alt="">
+            <div class="card p-3">
+              <img class="img-thumbnail d-block mx-auto" src="./img/html-5.png" alt="">
               <div class="card-body">
                 <h5 class="text-center">HTML</h5>
+                <div class="bStar text-center">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img class="img-thumbnail" src="./img/html-5.png" alt="">
+            <div class="card p-3">
+              <img class="img-thumbnail d-block mx-auto" src="./img/html-5.png" alt="">
               <div class="card-body">
                 <h5 class="text-center">HTML</h5>
+                <div class="bStar text-center">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img class="img-thumbnail" src="./img/html-5.png" alt="">
+            <div class="card p-3">
+              <img class="img-thumbnail d-block mx-auto" src="./img/html-5.png" alt="">
               <div class="card-body">
                 <h5 class="text-center">HTML</h5>
+                <div class="bStar text-center">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -143,13 +171,13 @@
     </section>
     
 
-    <section class="container-fluid portfolio ">
+    <section class="container-fluid portfolio" id="portfolio">
         <h1 class="text-center display-3 fw-bolder mb-5">Portfolio</h1>
         <div class="m-5">
             <div class="row d-flex">
                 <div class="col my-4">
                     <h2 class="display-3">LE SSERAFIM WEBSITE</h2>
-                    <p class="fs-3">Lorem ipsum dolor sit amet,
+                    <p class="fs-3 portContent">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
                     ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -163,24 +191,24 @@
                     </div>
                 </div>
                 <div class="col">
-                    <img class="rounded mx-auto imgContent my-5" src="https://sourcemusic.com/resources/artist/ee7a25f9-b7a4-4422-bb36-1206a7896f9b.png" alt="">
+                    <img class="rounded mx-auto imgContent my- 5 border" src="https://sourcemusic.com/resources/artist/ee7a25f9-b7a4-4422-bb36-1206a7896f9b.png" alt="">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="certificatexQuiz container">
+    <section class="certificatexQuiz container" id="certificatexQuiz">
           <h1 class="text-center display-3 fw-bolder mb-5">Certification</h1>
           <div id="carouselExampleDark" class="carousel carousel-dark slide">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="10000">
-                <img src="./img/Screenshot (41).png" class="d-block h-70 mx-auto" alt="...">
+                <img src="./img/Screenshot (41).png" class="img-fluid d-block h-70 mx-auto rounded" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="./img/Screenshot (40).png" class="d-block h-70 mx-auto" alt="...">
+                <img src="./img/Screenshot (40).png" class="img-fluid d-block h-70 mx-auto rounded" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="./img/Screenshot (39).png" class="d-block h-70 mx-auto" alt="...">
+                <img src="./img/Screenshot (39).png" class="img-fluid d-block h-70 mx-auto rounded" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -194,17 +222,18 @@
           </div>
     </section> 
 
-    <section class="container-fluid text-center contact">
+    <section class="container-fluid text-center contact" id="contact">
         <h1 class="text-center display-3 fw-bolder mb-5">CONTACT</h1>
         <p class="fs-2">I'm open to work.</p>
        <a href="mailto:jerriccojohncabunagan00@gmail.com" target="_blank" rel="noopener noreferrer"><button class="p-3 fs-5 contentButton">Call to Action</button></a>
       </section>
 
       <footer class="container-fluid text-center">
-        <!-- <a href="http://" target="_blank" rel="noopener noreferrer"><img src="" alt=""></a> -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"  class="bi bi-arrow-up-circle-fill mt-5" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-          </svg>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"  class="bi bi-arrow-up-circle-fill mt-5" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+            </svg>
+        </a>          
         <div class="row my-5 gx-5">
            <div class="col">
             <a href="https://www.linkedin.com/in/jerricco-john-cabunagan-916a0b147/" target="_blank" rel="noopener noreferrer">

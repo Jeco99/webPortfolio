@@ -1,7 +1,5 @@
-// TODO: the exit button need to be colored in offCanvas
-// TODO: the card need to be dynamic in tools section
-// TODO: the certificate image need to be responsive
-// TODO: recheck again
+// TODO: put hover on the nav
+// TODO: the button put a hover that change color
 
 
 const dark = document.getElementById('dark');
@@ -11,6 +9,7 @@ const reset = document.getElementById('clear');
 
 var h1 = document.getElementsByTagName('h1');
 var h2 = document.getElementsByTagName('h2');
+var h5 = document.getElementsByTagName('h5');
 var p = document.getElementsByTagName('p');
 var body = document.getElementsByTagName('body')[0];
 var nav = document.getElementsByTagName('nav')[0];
@@ -21,6 +20,13 @@ var icon = document.getElementsByClassName('bi');
 var bgDropdown = document.getElementsByClassName('bgDropdown');
 var offCanvas_bg = document.getElementsByClassName('offCanvas-bg')[0];
 var offCanvas_title = document.getElementById('offcanvasNavbarLabel');
+
+//close button
+var btnClose = document.getElementById('btnClose');
+
+//card
+var card = document.getElementsByClassName('card');
+
 
 // date
 var datePrint = document.getElementsByClassName('datePrint')[0];
@@ -56,6 +62,10 @@ function changeDark(){
     h2[h_Two].style.color = "white";
    }
 
+   for(let h_Five=0; h_Five < h2.length; h_Five++){
+    h5[h_Five].style.color = "white";
+   }
+
    for(let paraLen=0; paraLen < p.length; paraLen++){
     p[paraLen].style.color = "white";
    }
@@ -76,8 +86,20 @@ function changeDark(){
     bgDropdown[bgDropdown_Len].style.border = "1px solid white";
     }
 
+    for(let card_Len = 0; card_Len < card.length; card_Len++){
+        card[card_Len].style.backgroundColor = "black";
+        card[card_Len].style.color = "white";
+        card[card_Len].style.border = "1px solid white";
+    }
+
    navText.style.color = "white";
    offCanvas_title.style.color = "white";
+
+   //button close
+    btnClose.style.backgroundColor = "white";
+    btnClose.style.opacity = "5";
+    btnClose.style.color = "white";
+    
 
    //background
    body.style.backgroundColor = "black";
@@ -89,6 +111,7 @@ function changeDark(){
     icon[icon_Len].style.color = "white";
    }
 
+   
    //remove date
    datePrint.removeChild(dateDiv);
  
@@ -104,6 +127,10 @@ function changeWhite(){
     for(let h_Two=0; h_Two < h2.length; h_Two++){
      h2[h_Two].style.color = "black";
     }
+
+    for(let h_Five=0; h_Five < h2.length; h_Five++){
+        h5[h_Five].style.color = "black";
+       }
  
     for(let paraLen=0; paraLen < p.length; paraLen++){
      p[paraLen].style.color = "black";
@@ -116,7 +143,7 @@ function changeWhite(){
     for(let buttonLen=0; buttonLen < button.length; buttonLen++){
      button[buttonLen].style.color = "black";
      button[buttonLen].style.backgroundColor = "white";
-     button[buttonLen].style.border = "1px solid black"
+     button[buttonLen].style.border = "1px solid black";
     }
 
     for(let bgDropdown_Len = 0; bgDropdown_Len < bgDropdown.length; bgDropdown_Len++){
@@ -125,8 +152,19 @@ function changeWhite(){
         bgDropdown[bgDropdown_Len].style.border = "1px solid black";
     }
 
+    for(let card_Len = 0; card_Len < card.length; card_Len++){
+        card[card_Len].style.backgroundColor = "white";
+        card[card_Len].style.color = "black";
+        card[card_Len].style.border = "1px solid black";
+    }
+
     navText.style.color = "black";
     offCanvas_title.style.color = "black";
+
+    //button close
+   btnClose.style.backgroundColor = "white";
+   btnClose.style.opacity = "5";
+   btnClose.style.color = "white";
  
     //background
     body.style.backgroundColor = "white";
@@ -149,6 +187,10 @@ function changeWhite(){
     for(let h_Two=0; h_Two < h2.length; h_Two++){
      h2[h_Two].style.color = ranColor['blue']['blue-yonder'];
     }
+
+    for(let h_Five=0; h_Five < h2.length; h_Five++){
+        h5[h_Five].style.color = ranColor['blue']['blue-yonder'];
+    }
  
     for(let paraLen=0; paraLen < p.length; paraLen++){
      p[paraLen].style.color = ranColor['blue']['blue-yonder'];
@@ -163,9 +205,20 @@ function changeWhite(){
      button[buttonLen].style.backgroundColor = ranColor['blue']['non-photo-blue'];
      button[buttonLen].style.border = "1px solid black"
     }
+
+    for(let card_Len = 0; card_Len < card.length; card_Len++){
+        card[card_Len].style.backgroundColor = ranColor['blue']['oxford-blue'];
+        card[card_Len].style.color = ranColor['blue']['blue-yonder'];
+        card[card_Len].style.border = "1px solid black";
+    }
  
     navText.style.color = ranColor['blue']['blue-yonder'];
     offCanvas_title.style.color = ranColor['blue']['blue-yonder'];
+
+     //button close
+     btnClose.style.backgroundColor = "white";
+     btnClose.style.opacity = "5";
+     btnClose.style.color = "white";
  
     //background
     body.style.backgroundColor = ranColor['blue']['oxford-blue'];
@@ -213,7 +266,7 @@ randomly.addEventListener('click', changeBlue);
 reset.addEventListener('click', changeClear);
 
 //by default
-changeWhite()
+changeWhite();
 dateToday();
 
 
