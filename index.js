@@ -1,6 +1,7 @@
-// TODO: put hover on the nav
-// TODO: the button put a hover that change color
+// TODO: make a conditional regarding the existing remove of the divPrint
 
+// import { dateToday } from "./date.js";
+// console.log(dateToday());
 
 const dark = document.getElementById('dark');
 const white = document.getElementById('white');
@@ -27,10 +28,12 @@ var btnClose = document.getElementById('btnClose');
 //card
 var card = document.getElementsByClassName('card');
 
-
 // date
 var datePrint = document.getElementsByClassName('datePrint')[0];
 var dateDiv = document.createElement('div');
+
+//hover
+var hover = document.getElementById('hover');
 
 
 var ranColor = {
@@ -110,8 +113,7 @@ function changeDark(){
    for(let icon_Len=0; icon_Len < icon.length; icon_Len++){
     icon[icon_Len].style.color = "white";
    }
-
-   
+  
    //remove date
    datePrint.removeChild(dateDiv);
  
